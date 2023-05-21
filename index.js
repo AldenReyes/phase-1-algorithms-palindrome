@@ -1,24 +1,25 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let letters = word.split("")
+  while (letters.length > 1) {
+    if (letters.shift() === letters.pop()) {
+  } else {
+    return false
+  }
 }
-
-/* 
-  Add your pseudocode here
-*/
-
-/*
-  Add written explanation of your solution here
-*/
+  if (letters.length === 1 || letters.length === 0) {
+    return true
+  }
+}
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
   // add your own custom tests in here
-  console.log("Expecting: true");
+  console.log("Expecting: racecar = true");
   console.log("=>", isPalindrome("racecar"));
 
   console.log("");
 
-  console.log("Expecting: false");
+  console.log("Expecting: robot = false");
   console.log("=>", isPalindrome("robot"));
 }
 
